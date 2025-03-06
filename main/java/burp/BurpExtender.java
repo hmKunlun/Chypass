@@ -215,7 +215,7 @@ public class BurpExtender implements IBurpExtender, ITab, IContextMenuFactory {
 
                 sfGbc.gridx = 1;
                 sfGbc.fill = GridBagConstraints.HORIZONTAL;
-                JTextField siliconFlowModelField = new JTextField("ft:LoRA/Qwen/Qwen2.5-7B-Instruct:vdhqczgixp:chypass:hbcjemamdwetrgkiinme-ckpt_step_113", 40);
+                JTextField siliconFlowModelField = new JTextField("ft:", 40);
                 siliconflowPanel.add(siliconFlowModelField, sfGbc);
                 modelConfigPanel.add(siliconflowPanel, "SiliconFlow");
 
@@ -1089,7 +1089,7 @@ public class BurpExtender implements IBurpExtender, ITab, IContextMenuFactory {
         JSONObject json = new JSONObject();
         String modelName = modelNameField.getText().trim();
         if (modelName.isEmpty()) {
-            modelName = "ft:LoRA/Qwen/Qwen2.5-7B-Instruct:vdhqczgixp:chypass:hbcjemamdwetrgkiinme-ckpt_step_113";
+            modelName = "ft:";
         }
         json.put("model", modelName);
 
